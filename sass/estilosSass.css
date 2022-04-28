@@ -1,3 +1,18 @@
+/*Extends*/
+.card-title1, .card-title2, .card-title3, .card-title4, .card-title5, .card-title6 {
+  color: #347492;
+  size: 16px;
+  font-weight: bold;
+  border: solid 2px blue;
+  border-radius: 8px;
+}
+
+.card-body {
+  background-color: black;
+  text-align: center;
+  font-size: 14px;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,0 +1,48 @@
+$color-titulo-servicio:rgb(52, 116, 146);
+$tamaño-titulo-card:16px;
+
+@mixin crearBordes {
+    border: solid 2px blue;
+    border-radius: 8px;
+    
+}
+
+/*Extends*/
+.card-title1{
+    color: $color-titulo-servicio;
+    size: $tamaño-titulo-card;
+    font-weight: bold;
+    @include crearBordes();
+
+}
+
+.card-title2{
+    @extend .card-title1;
+}
+
+.card-title3{
+    @extend .card-title1;
+}
+.card-title4{
+    @extend .card-title1;
+}
+
+.card-title5{
+    @extend .card-title1;
+}
+
+.card-title6{
+    @extend .card-title1;
+}
+
+$estilos:(
+    color: black,
+    centro: center,
+    tFuente: 14px
+);
+
+.card-body{
+    background-color: map-get($estilos, color );
+    text-align: map-get($estilos, centro );
+    font-size: map-get($estilos, tFuente );
+}
