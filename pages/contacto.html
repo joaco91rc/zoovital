@@ -48,18 +48,21 @@
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-              <button class="btn btn-primary" type="submit">Buscar</button>
+              <button class="btn btn-primary" type="button">Buscar</button>
             </form>
           </div>
         </div>
       </nav>
-    <div class="contacto">
+    <div class="contacto container-fluid">
         <h2 class="contacto__Titulo">Ubicacion</h2>
         <p class="contacto__descripcion">Nuestro local se encuentra ubicado en Calle 28 Nro 596 Entre 43 y 44 – Ciudad
             de La Plata – Provincia de Buenos Aires, Argentina</p>
-        <img class="contacto__imagen" src="../assets/googlemaps.jpg" alt="Captura googlemap" width="700" height="350">
+            <div class="googleMaps container-fluid">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.062769897884!2d-57.97941288426539!3d-34.929962682340886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e7dbb91993f3%3A0x863b4bbf67840ae3!2sZoo%20Vital!5e0!3m2!1ses!2sar!4v1652934296059!5m2!1ses!2sar" width="800" height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+           
     </div>
-    <div class="consultaTitulo">
+    <div class="consultaTitulo container-fluid">
         <h3>Envianos tu Consulta</h3>
     </div>
     <div class="formulario">
@@ -86,17 +89,17 @@
                 </select>
                 <p><label for="consulta">Escriba aqui su Consulta:</label>
                 </p>
-                <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+                <textarea class="textArea" name="comentario" id="" cols="30" rows="10"></textarea>
                 <p>
-                    <input class="boton" type="submit" value="Enviar">
-                    <input class="boton" type="reset" value="Limpiar Formulario">
+                    <input class="boton btn btn-success" type="submit" value="Enviar">
+                    <input class="boton btn btn-secondary" type="reset" value="Limpiar Formulario">
                 </p>
             </fieldset>
         </form>
     </div>
     <footer class="piePagina">
       <div class="piePagina__fondo">
-          <img src="../assets/footerTransp.png" class="img-fluid" alt="footer">
+        <img src="../assets/footerTransp.png" class="imagenFooter img-fluid" alt="footer">
       </div>
       <div class="piePagina__descripcion">
           <h6>Todos los Derechos Reservados</h6>

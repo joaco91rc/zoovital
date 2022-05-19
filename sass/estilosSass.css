@@ -24,9 +24,9 @@
 .cabecera {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[8];
+  
       grid-template-columns: repeat(8, 1fr);
-  -ms-grid-rows: (0.5fr)[2];
+ 
       grid-template-rows: repeat(2, 0.5fr);
   padding: 0px;
   margin: 0px;
@@ -244,9 +244,9 @@
   background-repeat: no-repeat;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[10];
+  
       grid-template-rows: repeat(10, 1fr);
-  -ms-grid-columns: (1fr)[15];
+  
       grid-template-columns: repeat(15, 1fr);
 }
 
@@ -298,9 +298,9 @@
   display: -ms-grid;
   display: grid;
   background-image: linear-gradient(96.5deg, #2767bb 10.4%, #104890 87.7%);
-  -ms-grid-columns: (1fr)[3];
+  
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: auto auto auto;
+  
       grid-template-rows: auto auto auto;
 }
 
@@ -380,9 +380,9 @@
   height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (0.5fr)[5];
+  
       grid-template-columns: repeat(5, 0.5fr);
-  -ms-grid-rows: (0.5fr)[3];
+  
       grid-template-rows: repeat(3, 0.5fr);
 }
 
