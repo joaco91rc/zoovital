@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Cirugia mascotas vacunas para perros">
+    <meta name="keywords" content="veterinaria zoovital perros gatos medico Veterianario">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon/favicon2.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../sass/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <title>ZooVital</title>
+</head>
+
+<body>
+    <header class="cabecera">
+        <img class="logoHeader" src="../assets/logoZoovitalTransp.png" alt="logo" width="150" height="150">
+        <h1 class="tituloHeader">Clinica Veterinaria</h1>
+        
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/logoZoovitalTransp.png" alt="logo" width="64px" height="64px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/instalaciones.html">Instalaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../pages/usuarioActivos.html">Usuarios</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../tienda/productos/tienda.html">Shop</a>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    <div class="veterinariosContainer container-fluid">
+      <div class="veterinarios">
+          <h3 class="veterinarios__Titulo">Listado de Usuarios Registrados en el Pet Shop</h3>
+         <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+            <table class="table table-dark table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+
+            </table>
+         </div> 
+         
+    </div>
+    </div>
+
+    <footer class="piePagina">
+        <div class="piePagina__fondo">
+          <img src="../assets/footerTransp.png" class="imagenFooter img-fluid" alt="footer">
+        </div>
+        <div class="piePagina__descripcion">
+            <h6>Todos los Derechos Reservados</h6>
+        </div>
+        <div class="piePagina__redesSociales">
+          <a href="https://www.facebook.com/zoovital.veterinaria"><img src="../assets/facebook.png" class="img-fluid" alt="iconoFacebook"></a>
+          <a href="https://www.instagram.com/zoovital_vet/?hl=es"><img src="../assets/ig.png" class="img-fluid" alt="iconoInstagram"></a>
+        </div>
+  
+    </footer>
+    
+    <script>
+        let url ='https://jsonplaceholder.typicode.com/users'
+        fetch(url)
+            .then(response=>response.json())
+            .then(data=>mostrarData(data))
+            .catch(error=>console.log(error))
+
+            const mostrarData = (data) =>{
+                console.log(data)
+                let body =''
+                for (let i=0; i<data.length;i++){
+                    body+= `<tr><td>${data[i].name}</td><td>${data[i].email}</td></tr>`
+                }
+                
+               document.getElementById('data').innerHTML = body
+            }
+    </script>
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

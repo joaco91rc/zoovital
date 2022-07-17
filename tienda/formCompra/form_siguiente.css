@@ -1,0 +1,724 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+main{
+    position: relative;
+    overflow: hidden;  
+    scroll-behavior:smooth;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+    background-image: url(../../src/img/pantallaNavMovil.png);
+    background-position: bottom;
+}
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-thumb {
+    background:rgb(249, 178, 255);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background:rgb(250, 238, 215);
+}
+::-webkit-scrollbar-thumb:active {
+    background: #fcfcfc;
+}
+::-webkit-scrollbar-track {
+    border: 0px none #ffffff;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+/* configuracion preload */
+.preload{
+    width: 100vw;
+    height: 100vh;
+  /*   background: radial-gradient(circle, rgba(0,1,31,1) 0%, rgba(0,0,0,1) 100%); */
+    background-color: black;
+    position: fixed;
+    top: 0rem;
+    left: 0px;
+    z-index: 9000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* clase que crea js para que se cierra */
+
+.cerrar{
+    opacity: -0;
+    transition: all 0.5s;
+}
+
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: rgb(78, 240, 164) transparent rgb(78, 240, 164) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.nav{
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    top: 0;
+}
+
+.nav__img{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    filter: contrast(105%);
+}
+
+
+.nav__img img{
+    width: 85%;
+    height: 7.7rem;
+}
+
+.navVar-movile{
+    display: none;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color:rgb(250, 238, 215);
+    font-weight: 800;
+    letter-spacing: 1px;
+    filter: drop-shadow(1px 1px 1px black);
+
+} 
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    top: .4rem;
+}
+
+.nav-menu-link {
+    padding: 0px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link_active {
+    border-radius: 9%;
+    transition: 0.5s;
+}
+
+.logo{
+    position: absolute;
+    top: 0rem;
+    left: 12%;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    z-index: 4000;
+    display: none;
+}
+
+  /* TOGGLE */
+.nav-toggle {
+    position: absolute;
+    top: 0rem;
+    right: 12%;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+    z-index: 4000;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 4.5rem;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.cuenta{
+    border: 2px solid rgb(250, 238, 215);
+    border-radius: 15%;
+    margin-left: 2rem;
+}
+
+.nav-menu-link_active:hover{
+    transition: all 0.2s ease-in-out;
+}
+
+.nav li a:hover{
+    filter: drop-shadow(1px 1px 5px rgb(102, 102, 102));
+    transition: all 0.2s ease-in-out;
+}
+
+
+.cuenta:hover{
+    filter: drop-shadow(1px 1px 1px rgb(102, 102, 102));
+    transition:all 0.5s ease-in-out;
+}
+
+.nav-menu-link i{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 3.8rem;
+}
+
+.carrito{
+    font-size: 3.2rem;
+    margin-top: 0.7rem;
+    margin-left: 2.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.carrito i{
+    color: rgb(253, 244, 227);
+}
+
+.contador{
+    width: 2.8rem;
+    border-radius: 100%;
+    height: 2.8rem;
+    background-color: rgb(255, 251, 244);
+    position: absolute;
+    top: 15%;
+    right: -90%;
+}
+
+.contador p{
+    font-weight: 500;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+span{
+    font-size: 1.6rem;
+    color:#6b02e2;
+    font-weight: 800;
+}
+
+.cuenta:hover{
+    color: #ff71e7;
+    background-color:#ff71e72c ;
+    border: 2px groove #f889e67e;
+    transition:all 0.5s ease-in-out;
+}
+
+.cuenta{
+    color:#6b02e2;
+    border-radius: 15%;
+    margin-left: 2rem;
+}
+
+
+
+/* formulario */
+
+
+.complete{
+    color: red;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.tel label{
+    padding-left: 9rem;
+}
+
+.calle, .numero label{
+    padding-left: 1rem;
+}
+
+.localidad label{
+    padding-left: 3rem;
+}
+
+.provincia label{
+    padding-left: 2rem;
+}
+
+ .depto label{
+    padding-right: 1rem;
+}
+
+.piso label{
+    padding-right: 2rem;
+}
+
+.cp label{
+    padding-left: 5rem;
+}
+
+.observacion label{
+    padding-left: 10rem;
+}
+
+.container1,.container2,.container3,.container4,.container5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10rem;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../src/img/mader2.jpg);
+    background-size: cover;
+    object-fit: cover;
+}
+
+.container form{
+    border: 6px solid #41260f;
+    padding: 3rem 0 ;
+    border-radius: 30px;
+    background-color: rgb(255, 248, 241);
+    filter: drop-shadow(1px 1px 2px rgb(239, 249, 253));
+    margin: 1rem;
+}
+
+.input-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 4rem 0;
+    padding: 0 4rem;
+}
+
+.input-field label{
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: -4.5rem;
+    margin-left: -18rem;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.input-field i{
+    font-size: 3.4rem;
+    margin-top: -1rem;
+}
+
+.input-field input{
+    margin-top: 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    height: 3rem;
+    font-size: 1.5rem;
+    background: none;
+    width: 30rem;
+    font-weight: bold;
+}
+
+.input-field input:hover{
+    border-color: #6b02e2;
+}
+
+.material-icons{
+    color:#6b02e2;
+    padding: 0 1.5rem;
+}
+
+.enviar{
+    align-items: center;
+    appearance: none;
+    background-color: #e4ffff;
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65,  111, .5) 0 -3px 0 inset;
+    color:#6b02e2;
+    font-weight: 700;
+    cursor: pointer;
+    height: 42px;
+    width: 15rem;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-size: 18px;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.center-align{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+}
+
+.enviar:focus {
+    box-shadow: #dee1ff 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #aeb7ff 0 -3px 0 inset;
+}
+
+.enviar:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #a2adff 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.enviar:active {
+    transform: translateY(2px);
+}
+.enviar i{
+    margin-left: -1.5rem;
+    color:#6b02e2;
+}
+
+.enviar span{
+    font-size: 1.7rem;
+    position: relative;
+    color:#6b02e2;
+    font-weight: 700;
+}
+
+
+.provinciaCheck select, .localidadCheck select{
+    width: 30rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 100%;
+        height: 150vh;
+    }
+
+}
+
+@media screen and (max-width: 1080px){
+    .carrito{
+        display: none;
+    }
+
+    .nav__img img {
+        width: 85%;
+        height: 7rem;
+    }
+    
+ 
+    .navVar-desktop{
+        display: none;
+    }
+
+    .navVar-movile{
+        display: inline-block;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        background-image: url(../../src/img/mader2.jpg);
+        background-size: cover;
+        background-position:top ;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        padding: 20px 0;
+        height: 100vh;
+        left: 100%;
+        overflow-y: auto;
+        padding-top: 0rem;
+        transition: left 0.3s;
+        filter:contrast(102%);
+    }
+    
+    .nav-menu_visible {
+        left: 0%;
+    }
+
+
+    .nav-menu-item {
+        line-height: 80px;    
+        
+    }
+    .nav-menu-item a{
+        font-size: 2.1rem;
+    }
+
+    .cuenta{
+        margin-top: 2rem;
+        line-height: 60px;
+        background-color: #ff260017;
+        border-color: #ffffff6b;
+    }
+
+    .cuenta a{
+       font-size: 2rem;
+    }
+
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .fa-bars{
+        color: rgb(250, 238, 215);
+        font-size: 3.9rem;
+    }
+
+    .logo{
+        position: absolute;
+        top: -1.4rem;
+        left: 12%;
+        color: white;
+        background: none;
+        border: none;
+        padding: 0 20px;
+        cursor: pointer;
+        z-index: 4000;
+        display: block;
+    }
+
+    .logo a{
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+    .carrito {
+        position: fixed;
+        top: 5.3%;
+        right: 10%;
+        font-size: 3.1rem;
+        z-index: 11000;
+        margin-top: -0.4rem;
+    }
+
+
+    /* form */
+    
+    .container {
+        padding-top: 4rem;
+        width:100%;
+        height: auto;
+    }
+
+    .container form{
+        padding: 3rem 0 ;
+        border-radius: 30px;
+        margin: 8rem;
+    }
+}
+
+
+@media screen and (max-width: 740px){
+
+    .carrito {
+        position: fixed;
+        top: 5%;
+        right: 10%;
+        font-size: 3.2rem;
+        margin-top: -0.4rem;
+    }
+    
+    .nav__logo{
+        margin-left: -2rem;
+    }
+
+    .nav__logo img{
+        width: 70%;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width:480px){
+
+    .nav__img{
+        width: 100%;
+    }
+
+    .nav__img img{
+        width: 100%;
+    }
+
+    .logo{
+        left: 3%;
+    }
+
+    .logo a{
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .container__carrito{
+        width: 36rem;
+        height: 10rem;
+        top: 15%;
+        margin-top: 0rem;
+    }
+
+    .carrito{
+        top: 5.3%;
+    }
+
+    .container form{
+        padding: 6rem 1rem;
+        border-radius: 30px;
+    }
+    
+    .input-field{
+        margin: 4rem -1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width:390px){
+
+    .container{
+        padding: 10rem 0;
+    }
+    
+    .container form{
+        padding: 6rem 0 ;
+        border-radius: 30px;
+        margin: 0 1rem;
+    }
+    
+    .input-field{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: 4rem 0;
+        padding: 0 1rem;
+    }
+
+
+    .input-field i{
+        font-size: 3rem;
+    }
+
+    .input-field input{
+        width: 20rem;
+    }
+
+    .provinciaCheck select, .localidadCheck select{
+        width: 20rem;
+    }
+   
+
+    
+    .tel label{
+        padding-left: 19rem;
+    }
+    
+    .calle label, .numero label{
+        padding-left: 10rem;
+    }
+    
+    .localidad label{
+        padding-left: 12rem;
+    }
+    
+    .provincia label{
+        padding-left: 12rem;
+    }
+    
+    .depto label{
+        padding-left: 10rem;
+    }
+    
+    .piso label{
+        padding-left: 10rem;
+    }
+    
+    .cp label{
+        padding-left: 15rem;
+    }
+    
+    .observacion label{
+        padding-left: 20rem;
+    }
+}

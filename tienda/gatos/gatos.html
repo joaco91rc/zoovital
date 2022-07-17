@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="../../main.js"></script>
+    <link rel="stylesheet" href="../tienda.css">
+    <title>Tienda</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="banderin-carrito">
+            <img src="../../src/img/banderin-carrito.png" alt="Banderin Carrito">
+            <div class="title__carrito">
+                <p>Carrito</p>
+            </div>
+            <div class="carrito__pedido">
+                <p>Productos: <span class="contador_producto">0</span> </p>
+            </div>
+            <div class="precio__producto">
+                <span>$ 000</span>
+            </div>
+    
+            <div class="carrito__botton-ver">
+                <a href="../carrito/carrito.html"><button class="boton-ver">ver</button></a>
+            </div>
+        </div>
+        <nav class="nav">
+            <div class="nav__img">
+                <img src="../../src/img/navbar.png" alt="NavBar" class="navVar-desktop">
+                <img src="../../src/img/navbar-movile.png" alt="Barra de navegacion movile" class="navVar-movile">
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-menu-item logo">
+                    <a href="#" class="nav-menu-link nav-link">ZooVital Pet Shop</a>
+                </div>
+                <ul class="navVisible nav-menu">
+                    
+                    <li class="nav-menu-item">
+                        <a href="../productos/tienda.html" class="nav-menu-link nav-link ">ZooVital Pet Shop - Seccion Gatos</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="../../index.html" class="nav-menu-link nav-link ">Salir del Shop</a>
+                    </li>
+                    <div class="carrito ">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="contador">
+                            <p>0</p>
+                        </div>
+                    </div>
+    
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="nav2">
+            <div class="nav2__img"><img src="../../src/img/nav2-2.png" alt="nav2">
+                <ul>
+                    <li><a href="../perros/perros.html">Perros </a> </li><span>|</span>
+                    <li class="camas" ><a href="../cuchas/cuchas.html">Cuchas</a> </li><span>|</span>
+                    <li><a href="../accesorios/accesorios.html">accesorios</a> </li><span>|</span>
+                    <li><a href="../alimentos/alimentos.html">Alimentos</a> </li><span>|</span>
+                    <li><a href="../juguetes/juguetes.html">Juguetes</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="carrito__movil ">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="selec">
+            <div class="select__button">
+                <p>Filtrar</p>
+            </div>
+            <div class="selec__desktop">
+                <div class="exitFiltro"><i class="fas fa-times"></i></div>
+
+                <form action="" class="formPG">
+                    <input type="checkbox" class="Perros" name="casilla" > &nbsp;  Perros <br>
+                    <input type="checkbox" class="Gatos" name="casilla" checked> &nbsp; Gatos <br>
+                </form>
+                <form action="" class="formAA">
+                    <input type="checkbox" class="TodosProductos" name="casilla"  > &nbsp; Todos los productos <br>
+                    <input type="checkbox" class="Alimentos" name="casilla" > &nbsp; Alimentos <br>
+                    <input type="checkbox" class="Accesorios" name="casilla" > &nbsp;  Accesorios <br>
+                    <input type="checkbox" class="Juguetes" name="casilla"> &nbsp; Jueguetes <br>
+                    <input type="checkbox" class="Cuchas" name="casilla"> &nbsp; Cuchas <br>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="container" >
+            <div id="prod"></div>
+        </div>
+
+ 
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+
+    <script type="module" src="../js/principal.js"></script>
+    <script type="module" src="../js/carrito.js"></script>
+
+</body>
+</html>

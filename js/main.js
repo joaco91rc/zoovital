@@ -1,4 +1,4 @@
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+/* const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
   addToCartButton.addEventListener('click', addToCartClicked);
 });
@@ -116,3 +116,20 @@ function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
 }
+ */
+
+
+(() => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("nav-menu_visible");
+
+    if (navMenu.classList.contains("nav-menu_visible")) {
+      navToggle.setAttribute("aria-label", "Cerrar menú");
+    } else {
+      navToggle.setAttribute("aria-label", "Abrir menú");
+    }
+  });
+})();
